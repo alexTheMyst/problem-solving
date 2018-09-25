@@ -6,3 +6,5 @@ include 'integer-to-roman'
 include 'roman-to-integer'
 include 'longest-common-prefix'
 include 'valid-parentheses'
+include 'binary-tree-inorder-traversal'
+
