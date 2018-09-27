@@ -43,4 +43,12 @@ public class SolutionTest {
         assertThat(solution.inorderTraversalRecursive(this.rootNode), is(rightAnswer));
     }
 
+    @Test
+    public void morrisMethodTest() {
+        List<Integer> rightAnswer = Arrays.asList(1, 3, 2);
+
+        Solution solution = new Solution();
+
+        assertThat(solution.inorderMorris(this.rootNode), is(rightAnswer));
+    }
 }

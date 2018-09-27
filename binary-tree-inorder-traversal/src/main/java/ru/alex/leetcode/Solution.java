@@ -57,6 +57,31 @@ public class Solution {
         return result;
     }
 
+    public List<Integer> inorderMorris(TreeNode rootNode) {
+        List<Integer> result = new ArrayList<>();
+        TreeNode current = rootNode;
+        while (current != null) {
+            if (current.left == null) {
+                result.add(current.val);
+                current = current.right;
+            } else {
+                TreeNode previous = current.left;
+                while (previous.right != null && previous.right != current) {
+                    previous = previous.right;
+                }
+                if (previous.right == null) {
+                    previous.right = current;
+                    current = current.left;
+                } else {
+                    previous.right = null;
+                    result.add(current.val);
+                    current = current.right;
+                }
+            }
+        }
+        return result;
+    }
+
 
     /**
      * Tree node.
